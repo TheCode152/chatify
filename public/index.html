@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Chatify</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Chatify: servers, roles, private channels, image sharing and more.">
+<meta name="theme-color" content="#6c4cf5">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css"></head><body>
+
+<div id="auth">
+ <form class="card" onsubmit="return false">
+  <div class="logo">Chatify</div>
+  <div class="mu" id="amode">Log in to continue</div>
+  <input id="u" placeholder="Username" autocomplete="username" maxlength="20">
+  <input id="p" type="password" placeholder="Password (6+ characters)" autocomplete="current-password">
+  <input id="ac" class="hide" type="password" placeholder="Admin code (needed for the name “admin”)">
+  <div class="err" id="aerr"></div>
+  <button class="btn" id="go" type="button">Log in</button>
+  <button class="btn g" id="swap" type="button">Create an account</button>
+  <div class="mu">Made by ZanMan</div>
+ </form>
+</div>
+
+<div id="app" class="hide">
+ <aside id="side">
+  <div class="logo">Chatify</div>
+  <div class="mu" id="who"></div>
+  <div class="row"><button class="btn grow" id="mk">+ Server</button><button class="btn g grow" id="jn">Join code</button></div>
+  <div id="svl"></div>
+  <div class="mu">Channels</div>
+  <div id="chl"></div>
+  <button class="btn g" id="lb">🏆 Leaderboard</button>
+  <button class="btn g" id="pf">👤 Profile settings</button>
+  <button class="btn g" id="adm">🔐 Admin panel</button>
+  <button class="btn g" id="out">Log out</button>
+  <div class="mu ctr">Made by ZanMan</div>
+ </aside>
+ <section id="main">
+  <div id="top"><button class="btn g" id="menu">☰</button><span id="chname" class="grow"></span><button class="btn g hide" id="gear">⚙ Server</button></div>
+  <div id="ann" class="hide"><span>📢 <b id="antx"></b></span><button id="andx">Dismiss</button></div>
+  <div id="msgs"></div>
+  <div class="err pad" id="serr"></div>
+  <form id="send" onsubmit="return false">
+   <button class="btn g" id="att" type="button" title="Send an image (.png, .jpg, .webp)">📎</button>
+   <input id="mi" placeholder="Message" maxlength="500" autocomplete="off">
+   <button class="btn" id="sb" type="submit">Send</button>
+   <input type="file" id="fi" class="hide" accept=".png,.jpg,.jpeg,.webp,image/png,image/jpeg,image/webp">
+  </form>
+ </section>
+</div>
+
+<div id="splash" class="hide"><div><h1>Chatify</h1><p>Made by ZanMan</p></div></div>
+<div id="modal" class="modal hide"><div class="card" id="mc"></div></div>
+<script src="app.js" defer></script></body></html>

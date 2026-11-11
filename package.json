@@ -1,0 +1,9 @@
+{
+  "name": "chatify",
+  "version": "1.0.0",
+  "description": "Chatify: a chat website with accounts, private channels and an admin panel. Made by ZanMan.",
+  "main": "index.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" },
+  "license": "MIT"
+}
